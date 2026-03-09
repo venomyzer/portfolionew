@@ -63,7 +63,7 @@ function Node({ refProp, icon, size = 64, className }) {
     )
 }
 
-export function AIworkflow() {
+function AIworkflow() {
 
     return (
 
@@ -81,7 +81,7 @@ export function AIworkflow() {
             </div>
 
             {/* Main layout */}
-            <div className="flex items-center justify-center gap-10 w-full">
+            <div className="flex items-center justify-center gap-10 w-full pr-16">
 
                 {/*Node Diagram*/}
                 <WorkflowDiagram height={400} icons={ICONS} />
@@ -100,3 +100,5 @@ export function AIworkflow() {
         </section>
     )
 }
+
+export default AIworkflow

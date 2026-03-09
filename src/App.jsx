@@ -2,9 +2,11 @@ import { useState } from "react"
 import { SmoothCursor } from "@/components/ui/smooth-cursor.jsx"
 import { WorkAlert } from "@/components/UI Builds/WorkAlert.jsx"
 import { ConnectDrawer } from "@/components/UI Builds/ConnectDrawer.jsx"
-import { AIworkflow } from "@/components/sections/AIworkflow.jsx"
+
 
 import HeroSection from "./components/sections/HeroSection"
+import AIworkflow  from "./components/sections/AIworkflow"
+import Details from "./components/sections/Details"
 
 function App() {
     const [showAlert, setShowAlert] = useState(false)
@@ -58,6 +60,10 @@ function App() {
                 <AIworkflow />
             </div>
             {/*AI WORKFLOW*/}
+
+            <div className="relative h-screen w-full overflow-hidden px-40">
+                <Details />
+            </div>
 
         </div>
     )
