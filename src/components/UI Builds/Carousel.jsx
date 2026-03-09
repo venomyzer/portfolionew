@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils.js"
 
 export function Carousel({ slides = [], interval = 3000 }) {
     const [current, setCurrent] = useState(0)

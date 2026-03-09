@@ -2,7 +2,7 @@ import { useState } from "react"
 import { SmoothCursor } from "@/components/ui/smooth-cursor.jsx"
 import { WorkAlert } from "@/components/UI Builds/WorkAlert.jsx"
 import { ConnectDrawer } from "@/components/UI Builds/ConnectDrawer.jsx"
-import { AIworkflow } from "@/components/UI Builds/AIworkflow.jsx"
+import { AIworkflow } from "@/components/sections/AIworkflow.jsx"
 
 import HeroSection from "./components/sections/HeroSection"
 
@@ -13,8 +13,11 @@ function App() {
     return (
         <div className="cursor-none">
 
+
             {/*POINTER*/}
             <SmoothCursor />
+
+
 
             {/*ALERT*/}
             <div className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500
@@ -26,14 +29,8 @@ function App() {
             >
                 <WorkAlert onConnect={() => setShowDrawer(true)} />
             </div>
-            {/*Alert HElPER*/}
-            <div
-                className="relative h-screen w-full overflow-hidden"
-                onMouseEnter={() => setShowAlert(true)}
-                onMouseLeave={() => setShowAlert(false)}
-            >
-                <HeroSection />
-            </div>
+
+
 
             {/*DRAWER*/}
             <ConnectDrawer
@@ -41,10 +38,26 @@ function App() {
                 onClose={() => setShowDrawer(false)}
             />
 
+
+
+
+            {/*HERO SECTION*/}
+            <div
+                className="relative h-screen w-full overflow-hidden"
+                onMouseEnter={() => setShowAlert(true)}
+                onMouseLeave={() => setShowAlert(false)}
+            >
+                <HeroSection />
+            </div>
+            {/*HERO SECTION*/}
+
+
+
+            {/*AI WORKFLOW*/}
             <div className="relative h-screen w-full overflow-hidden px-40">
                 <AIworkflow />
             </div>
-
+            {/*AI WORKFLOW*/}
 
         </div>
     )
