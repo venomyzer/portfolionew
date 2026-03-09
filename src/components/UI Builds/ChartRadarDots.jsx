@@ -1,5 +1,5 @@
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart.jsx"
 
 const chartData = [
     { month: "Graphic Design", skill: 250 },

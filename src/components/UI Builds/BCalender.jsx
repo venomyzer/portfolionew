@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Calendar } from "../ui/calendar"
+import { Calendar } from "../ui/calendar.jsx"
 
 export function BCalender() {
     const [selected, setSelected] = useState(undefined)

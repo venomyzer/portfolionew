@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "@heroui/styles";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/figtree";
 
@@ -51,7 +52,6 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  display: flex;
 }
 
 .dark {
@@ -145,5 +145,8 @@ body {
     @apply font-sans;
 
   }
+}
 
+* {
+  cursor: none !important;
 }
