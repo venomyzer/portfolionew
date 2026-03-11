@@ -63,7 +63,7 @@ export function ChartRadarDots() {
                 <PolarGrid />
                 <Radar
                     dataKey="skill"
-                    fill="blue"
+                    fill="#ff9f40"
                     fillOpacity={0.5}
                     dot={{ r: 4, fillOpacity: 1 }}
                 />
