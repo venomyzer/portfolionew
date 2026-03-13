@@ -8,6 +8,7 @@ import HeroSection from "./components/sections/HeroSection"
 import AIworkflow  from "./components/sections/AIworkflow"
 import Details from "./components/sections/Details"
 import CertiSection from "./components/sections/CertiSection"
+import ProjectSection from "./components/sections/ProjectSection"
 
 function App() {
     const [showAlert, setShowAlert] = useState(false)
@@ -77,6 +78,12 @@ function App() {
                 <CertiSection />
             </div>
             {/*CERTIFICATION*/}
+
+
+            <div className="relative h-screen w-full overflow-hidden px-40">
+                <ProjectSection />
+            </div>
+
 
         </div>
     )
