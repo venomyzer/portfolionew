@@ -6,16 +6,17 @@ import { WorkflowDiagram } from "@/components/UI Builds/WorkFlowDiagram.jsx"
 
 import figmaIcon from "@/assets/icons/figma.svg"
 import dribbleIcon from "@/assets/icons/dribble.svg"
-import webstormIcon from "@/assets/icons/webstorm.svg"
+import jetbrainsIcon from "@/assets/icons/jetbrains.svg"
 import claudeIcon from "@/assets/icons/claude.svg"
 import githubIcon from "@/assets/icons/github.svg"
 import notionIcon from "@/assets/icons/notion.svg"
+import {cn} from "@heroui/react";
 
 const ICONS = {
     notion: notionIcon,
     dribble: dribbleIcon,
     figma: figmaIcon,
-    webstorm: webstormIcon,
+    jetbrains: jetbrainsIcon,
     claude: claudeIcon,
     github: githubIcon,
 }
@@ -34,12 +35,12 @@ const SLIDES = [
     {
         number: "03",
         title: "Build",
-        description: "I open WebStorm and start building the structure — components, routing, state. This is where the design becomes real code.",
+        description: "Develop complete applications—from structuring frontend components and state management to implementing backend services, APIs, and database integration.”",
     },
     {
         number: "04",
-        title: "Refine with AI",
-        description: "Claude helps me style components, debug tricky issues, and find smarter ways to do things. It's an iterative back-and-forth that makes the final result much tighter.",
+        title: "Debug with AI",
+        description: "Use AI-assisted workflows to enhance code quality, streamline debugging, and build efficient, scalable full-stack applications with modern technologies.",
     },
     {
         number: "05",

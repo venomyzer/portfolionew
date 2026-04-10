@@ -22,7 +22,7 @@ export function WorkflowDiagram({ height = 400, icons }) {
     const notionRef = useRef(null)
     const dribbleRef = useRef(null)
     const figmaRef = useRef(null)
-    const webstormRef = useRef(null)
+    const jetbrainsRef = useRef(null)
     const claudeRef = useRef(null)
     const githubRef = useRef(null)
 
@@ -44,12 +44,12 @@ export function WorkflowDiagram({ height = 400, icons }) {
 
             {/* Figma — bottom left */}
             <div style={{ position: "absolute", left: "10%", top: "85%" }}>
-                <Node refProp={figmaRef} icon={icons.figma} size={60} className="border-purple-300" />
+                <Node refProp={figmaRef} icon={icons.figma} size={60} className="border-purple-200" />
             </div>
 
-            {/* WebStorm — center hub */}
+            {/* Jetbrains — center hub */}
             <div style={{ position: "absolute", left: "40%", top: "50%" }}>
-                <Node refProp={webstormRef} icon={icons.webstorm} size={70} className="border-blue-400" />
+                <Node refProp={jetbrainsRef} icon={icons.jetbrains} size={70} className="border-rose-300" />
             </div>
 
             {/* Claude — center-right */}
@@ -63,15 +63,15 @@ export function WorkflowDiagram({ height = 400, icons }) {
             </div>
 
             {/* BEAMS */}
-            <AnimatedBeam containerRef={containerRef} fromRef={notionRef} toRef={webstormRef}
+            <AnimatedBeam containerRef={containerRef} fromRef={notionRef} toRef={jetbrainsRef}
                           curvature={-20} gradientStartColor="#6b7280" gradientStopColor="#3b82f6" />
-            <AnimatedBeam containerRef={containerRef} fromRef={dribbleRef} toRef={webstormRef}
+            <AnimatedBeam containerRef={containerRef} fromRef={dribbleRef} toRef={jetbrainsRef}
                           gradientStartColor="#ec4899" gradientStopColor="#3b82f6" />
-            <AnimatedBeam containerRef={containerRef} fromRef={figmaRef} toRef={webstormRef}
+            <AnimatedBeam containerRef={containerRef} fromRef={figmaRef} toRef={jetbrainsRef}
                           curvature={20} gradientStartColor="#8b5cf6" gradientStopColor="#3b82f6" />
-            <AnimatedBeam containerRef={containerRef} fromRef={webstormRef} toRef={claudeRef}
+            <AnimatedBeam containerRef={containerRef} fromRef={jetbrainsRef} toRef={claudeRef}
                           curvature={70} gradientStartColor="#3b82f6" gradientStopColor="#f97316" />
-            <AnimatedBeam containerRef={containerRef} fromRef={claudeRef} toRef={webstormRef}
+            <AnimatedBeam containerRef={containerRef} fromRef={claudeRef} toRef={jetbrainsRef}
                           reverse={true} curvature={-70} gradientStartColor="#f97316"
                           gradientStopColor="#3b82f6" delay={1.5} />
             <AnimatedBeam containerRef={containerRef} fromRef={claudeRef} toRef={githubRef}

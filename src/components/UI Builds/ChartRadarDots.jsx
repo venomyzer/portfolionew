@@ -4,12 +4,12 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/
 // ── Data ──────────────────────────────────────────────────────────────────────
 
 const chartData = [
-    { month: "Graphic Design", skill: 250 },
-    { month: "DBMS", skill: 200 },
+    { month: "Design & UI", skill: 250 },
+    { month: "SQL", skill: 200 },
     { month: "DSA", skill: 150 },
-    { month: "OOPJ", skill: 250 },
+    { month: "Springboot", skill: 200 },
     { month: "React", skill: 200 },
-    { month: "UI/UX", skill: 250 },
+    { month: "OOPJ", skill: 250 },
 ]
 
 const chartConfig = {
@@ -39,7 +39,8 @@ function CustomLabel({ x, y, cx, cy, payload }) {
             y={ny}
             textAnchor="middle"
             dominantBaseline="central"
-            fontSize={14}
+            fontSize={15}
+            fontWeight="bold"
             fill="#888"
             style={{ userSelect: "none", pointerEvents: "none" }}
         >
@@ -55,7 +56,7 @@ export function ChartRadarDots() {
             className="mx-0 aspect-square min-w-[550px] max-w-[550px] [&>svg]:overflow-visible"
         >
 
-            <RadarChart data={chartData} outerRadius={200} cx="50%" cy="50%">>
+            <RadarChart data={chartData} outerRadius={200} cx="50%" cy="50%">
                 <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
 
                 <PolarAngleAxis dataKey="month" tick={<CustomLabel />} />
@@ -63,7 +64,7 @@ export function ChartRadarDots() {
                 <PolarGrid />
                 <Radar
                     dataKey="skill"
-                    fill="#ff9f40"
+                    fill="#9EFF44FF"
                     fillOpacity={0.5}
                     dot={{ r: 4, fillOpacity: 1 }}
                 />

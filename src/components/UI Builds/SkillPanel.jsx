@@ -8,12 +8,10 @@ import illustratorIcon from "@/assets/icons/illustrator.svg"
 import reactIcon from "@/assets/icons/react.svg"
 import javascriptIcon from "@/assets/icons/javascript.svg"
 import tailwindIcon from "@/assets/icons/tailwind.svg"
-import nodejsIcon from "@/assets/icons/nodejs.svg"
 import claudeIcon from "@/assets/icons/claudecolor.svg"
 import chatgptIcon from "@/assets/icons/chatgpt.svg"
 import cursorIcon from "@/assets/icons/cursor.svg"
 import zapierIcon from "@/assets/icons/zapier.svg"
-import slackIcon from "@/assets/icons/slack.svg"
 import geminiIcon from "@/assets/icons/gemini.svg"
 import notionIcon from "@/assets/icons/notion.svg"
 import n8nIcon from "@/assets/icons/n8n.svg"
@@ -24,9 +22,40 @@ import pythonIcon from "@/assets/icons/python.svg"
 import cplusplusIcon from "@/assets/icons/cplusplus.svg"
 import mailchimpIcon from "@/assets/icons/mailchimp.svg"
 import mongodbIcon from "@/assets/icons/mongodb.svg"
+import springbootIcon from "@/assets/icons/spring.svg"
+import postgresqlIcon from "@/assets/icons/postgresql.svg"
 
 // ── Sections data ─────────────────────────────────────────────────────────────
 const SECTIONS = [
+    {
+        id: "dev",
+        label: "Development",
+        description: "Building fast, scalable and maintainable web applications with a strong foundation in modern frontend, backend and core computer science principles.",
+        categories: [
+            {
+                title: "Full Stack Development",
+                capabilities: ["Responsive UI", "Component Architecture", "REST API", "OAuth", "Serverless Functions"],
+                skills: [
+                    { name: "React", icon: reactIcon },
+                    { name: "Tailwind", icon: tailwindIcon },
+                    { name: "MongoDB", icon: mongodbIcon },
+                    { name: "Springboot", icon: springbootIcon },
+                    { name: "Postgresql", icon: postgresqlIcon },
+                ],
+            },
+            {
+                title: "Languages & Concepts",
+                capabilities: ["Data Structures", "Algorithm Design", "Database Design", "Object Oriented Systems"],
+                skills: [
+                    { name: "Java", icon: javaIcon },
+                    { name: "JavaScript", icon: javascriptIcon },
+                    { name: "Python", icon: pythonIcon },
+                    { name: "C++", icon: cplusplusIcon },
+                ],
+            },
+        ],
+    },
+
     {
         id: "design",
         label: "Graphic & Brand Design",
@@ -51,32 +80,7 @@ const SECTIONS = [
             },
         ],
     },
-    {
-        id: "dev",
-        label: "Development",
-        description: "Building fast, scalable and maintainable web applications with a strong foundation in both modern frontend craft and core computer science principles.",
-        categories: [
-            {
-                title: "Frontend",
-                capabilities: ["Responsive UI", "Component Architecture", "REST API Integration", "Performance Optimization"],
-                skills: [
-                    { name: "React", icon: reactIcon },
-                    { name: "Tailwind", icon: tailwindIcon },
-                    { name: "MongoDB", icon: mongodbIcon },
-                    { name: "Node.js", icon: nodejsIcon },
-                ],
-            },
-            {
-                title: "Engineering",
-                capabilities: ["Data Structures", "Algorithm Design", "Database Design", "Object Oriented Systems"],
-                skills: [
-                    { name: "Java", icon: javaIcon },
-                    { name: "Python", icon: pythonIcon },
-                    { name: "C++", icon: cplusplusIcon },
-                ],
-            },
-        ],
-    },
+
     {
         id: "ai",
         label: "Production & Shipping",
@@ -84,7 +88,7 @@ const SECTIONS = [
         categories: [
             {
                 title: "AI Assistants",
-                capabilities: ["Prompt Engineering", "AI-Assisted Development", "Code Review & Debugging", "Content Generation"],
+                capabilities: ["Research", "Debugging", "Test Case Generation", "Documentation", "Security Analysis"],
                 skills: [
                     { name: "Claude", icon: claudeIcon },
                     { name: "ChatGPT", icon: chatgptIcon },
@@ -135,7 +139,7 @@ function SkillChip({ name, icon, index }) {
 
 // ── Main Component ────────────────────────────────────────────────────────────
 export function SkillsPanel() {
-    const [active, setActive] = useState("design")
+    const [active, setActive] = useState("dev")
 
     const section = SECTIONS.find(s => s.id === active)
 

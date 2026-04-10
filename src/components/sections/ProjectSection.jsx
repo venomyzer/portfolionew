@@ -1,53 +1,49 @@
-// ── ProjectsSection.jsx ───────────────────────────────────────────────────────
-import { useState } from "react"
-import { FeaturedCard, GridCard, PROJECTS } from "@/components/UI Builds/ProjectCard.jsx"
+import { ProjectCard, CERTS } from "@/components/UI Builds/Projects.jsx"
 
-export default function ProjectSection() {
-    // featuredId tracks which project is currently in the featured slot
-    const [featuredId, setFeaturedId] = useState(PROJECTS[0].id)
 
-    const featured = PROJECTS.find(p => p.id === featuredId)
-    const grid = PROJECTS.filter(p => p.id !== featuredId)
-
-    function handleGridClick(project) {
-        // Swap clicked grid card into featured slot
-        setFeaturedId(project.id)
-    }
+function ProjectSection() {
+    const [wide, tall, ...small] = CERTS
 
     return (
-        <section className="w-full h-full flex flex-col justify-center select-none">
+        <section className="w-full h-full flex flex-col justify-center items-center select-none">
 
             {/* Header */}
-            <div className="mb-10 text-center">
+            <div className="mb-20 text-center">
                 <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
-                    What I Build?
+                    What I Work On?
                 </p>
-                <h2 className="text-5xl font-black">Case Study & Projects</h2>
+                <h2 className="text-5xl font-black mb-5">Projects & Case Studies</h2>
+                <h3 className="text-2xl font-regular text-black/50">
+                    "Real-world projects showcasing my skills in full-stack development,<br/> problem-solving, and modern web technologies."
+                </h3>
             </div>
 
-            {/* Layout — featured left, grid right */}
-            <div className="flex gap-5 w-full" style={{ height: "560px" }}>
-
-                {/* Featured card */}
-                <FeaturedCard
-                    project={featured}
-                    className="w-[380px] shrink-0 h-full"
-                />
-
-                {/* Grid — 2x2 */}
-                <div className="grid grid-cols-2 grid-rows-2 gap-4 flex-1">
-                    {grid.map(project => (
-                        <GridCard
-                            key={project.id}
-                            project={project}
-                            onClick={() => handleGridClick(project)}
-                            className="h-full"
-                        />
-                    ))}
+            {/* Bento Grid */}
+            <div
+                className="grid grid-cols-[1.75fr_1.75fr_1fr] grid-rows-2 gap-4"
+                style={{ height: "580px", width: "1300px" }}
+            >
+                {/* Wide card — col 1, row 1 */}
+                <div className="col-span-2 row-span-1 h-full">
+                    <ProjectCard cert={wide} />
                 </div>
+
+                {/* Tall card — col 3, rows 1-2 */}
+                <div className="col-start-3 row-span-2 h-full">
+                    <ProjectCard cert={tall} />
+                </div>
+
+                {/* Normal cards — col 1 and 2, row 2 */}
+                {small.map((cert) => (
+                    <div key={cert.id} className="col-span-1 row-span-1 h-full">
+                        <ProjectCard cert={cert} />
+                    </div>
+                ))}
 
             </div>
 
         </section>
     )
 }
+
+export default ProjectSection

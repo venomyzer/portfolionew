@@ -7,8 +7,7 @@ import { ConnectDrawer } from "@/components/UI Builds/ConnectDrawer.jsx"
 import HeroSection from "./components/sections/HeroSection"
 import AIworkflow  from "./components/sections/AIworkflow"
 import Details from "./components/sections/Details"
-import CertiSection from "./components/sections/CertiSection"
-import ProjectSection from "./components/sections/ProjectSection"
+import ProjectSection from "./components/sections/ProjectSection.jsx"
 
 function App() {
     const [showAlert, setShowAlert] = useState(false)
@@ -56,7 +55,6 @@ function App() {
             {/*HERO SECTION*/}
 
 
-
             {/*AI WORKFLOW*/}
             <div className="relative h-screen w-full overflow-hidden px-40">
                 <AIworkflow />
@@ -64,25 +62,18 @@ function App() {
             {/*AI WORKFLOW*/}
 
 
+            {/*PROJECT SECTION*/}
+            <div className="relative h-screen w-full overflow-hidden px-40">
+                <ProjectSection />
+            </div>
+            {/*PROJECT SECTION*/}
+
 
             {/*SKILLS*/}
             <div className="relative h-screen w-full overflow-hidden px-40">
                 <Details />
             </div>
             {/*SKILLS*/}
-
-
-
-            {/*CERTIFICATION*/}
-            <div className="relative h-screen w-full overflow-hidden px-40">
-                <CertiSection />
-            </div>
-            {/*CERTIFICATION*/}
-
-
-            <div className="relative h-screen w-full overflow-hidden px-40">
-                <ProjectSection />
-            </div>
 
 
         </div>
