@@ -2,12 +2,14 @@ import { useState } from "react"
 import { SmoothCursor } from "@/components/ui/smooth-cursor.jsx"
 import { WorkAlert } from "@/components/UI Builds/WorkAlert.jsx"
 import { ConnectDrawer } from "@/components/UI Builds/ConnectDrawer.jsx"
+import { MobileRedirect } from "@/components/UI Builds/MobileRedirect"
 
 
 import HeroSection from "./components/sections/HeroSection"
 import AIworkflow  from "./components/sections/AIworkflow"
 import Details from "./components/sections/Details"
 import ProjectSection from "./components/sections/ProjectSection.jsx"
+
 
 function App() {
     const [showAlert, setShowAlert] = useState(false)
@@ -16,6 +18,8 @@ function App() {
     return (
         <div className="cursor-none">
 
+
+            <MobileRedirect />
 
             {/*POINTER*/}
             <SmoothCursor />
