@@ -1,4 +1,4 @@
-import { ProjectCard, CERTS } from "@/components/UI Builds/Projects.jsx"
+import { ProjectCard, CERTS } from "@/components/UIBuilds/Projects.jsx"
 
 
 function ProjectSection() {

@@ -1,7 +1,7 @@
 
-import { Carousel } from "@/components/UI Builds/Carousel.jsx"
-import { AITechStack } from "@/components/UI Builds/AItechstack.jsx"
-import { WorkflowDiagram } from "@/components/UI Builds/WorkFlowDiagram.jsx"
+import { Carousel } from "@/components/UIBuilds/Carousel.jsx"
+import { AITechStack } from "@/components/UIBuilds/AItechstack.jsx"
+import { WorkflowDiagram } from "@/components/UIBuilds/WorkFlowDiagram.jsx"
 
 
 import figmaIcon from "@/assets/icons/figma.svg"

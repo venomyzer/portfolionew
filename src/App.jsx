@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { SmoothCursor } from "@/components/ui/smooth-cursor.jsx"
-import { WorkAlert } from "@/components/UI Builds/WorkAlert.jsx"
-import { ConnectDrawer } from "@/components/UI Builds/ConnectDrawer.jsx"
-import { MobileRedirect } from "@/components/UI Builds/MobileRedirect"
+import { WorkAlert } from "@/components/UIBuilds/WorkAlert.jsx"
+import { ConnectDrawer } from "@/components/UIBuilds/ConnectDrawer.jsx"
+import { MobileRedirect } from "@/components/UIBuilds/MobileRedirect"
 
 
 import HeroSection from "./components/sections/HeroSection"

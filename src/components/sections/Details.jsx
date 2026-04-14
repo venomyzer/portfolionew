@@ -1,5 +1,5 @@
-import { SkillsPanel } from "@/components/UI Builds/SkillPanel.jsx"
-import {ChartRadarDots} from "@/components/UI Builds/ChartRadarDots.jsx";
+import { SkillsPanel } from "@/components/UIBuilds/SkillPanel.jsx"
+import {ChartRadarDots} from "@/components/UIBuilds/ChartRadarDots.jsx";
 
 
 function Details() {
